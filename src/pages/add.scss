@@ -1,0 +1,60 @@
+.container {
+  .add-container {
+    .add-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.1rem 1rem;
+      background-color: white;
+      border-bottom: 1px solid black;
+      .home {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .form {
+      width: 500px;
+      h1 {
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .inputs {
+        border-top: 1px solid black;
+        display: flex;
+        flex-direction: column;
+
+        .input-box {
+          border-bottom: 1px solid black;
+          display: flex;
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 0 1rem;
+            border-right: 1px solid black;
+          }
+          input {
+            width: 80%;
+            background-color: transparent;
+            font-family: inherit;
+            padding: 20px 10px;
+          }
+          textarea {
+            width: 80%;
+            background-color: transparent;
+            font-family: inherit;
+            padding: 20px 10px;
+            resize: none;
+          }
+        }
+
+        button {
+        }
+      }
+    }
+  }
+}
