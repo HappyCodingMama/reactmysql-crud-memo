@@ -23,7 +23,10 @@ const Add = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:5500/books', book);
+      await axios.post(
+        'https://memo-react-mysql-backend.onrender.com/books',
+        book
+      );
       navigate('/');
     } catch (err) {
       console.log(err);

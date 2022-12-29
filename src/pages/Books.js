@@ -4,13 +4,17 @@ import { Link } from 'react-router-dom';
 import './books.scss';
 import { AiOutlineDelete, AiOutlineEdit, AiOutlinePlus } from 'react-icons/ai';
 
+//https://memo-react-mysql-backend.onrender.com
+
 const Books = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get('http://localhost:5500/books');
+        const res = await axios.get(
+          'https://memo-react-mysql-backend.onrender.com/books'
+        );
         setBooks(res.data);
       } catch (err) {
         console.log(err);
@@ -22,7 +26,9 @@ const Books = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure that you wanted to delete this?')) {
       try {
-        await axios.delete('http://localhost:5500/books/' + id);
+        await axios.delete(
+          'https://memo-react-mysql-backend.onrender.com/books/' + id
+        );
         window.location.reload();
       } catch (err) {
         console.log(err);

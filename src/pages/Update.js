@@ -28,8 +28,14 @@ const Update = () => {
 
     try {
       state
-        ? await axios.put('http://localhost:5500/books/' + bookId, book)
-        : await axios.post('http://localhost:5500/books', book);
+        ? await axios.put(
+            'https://memo-react-mysql-backend.onrender.com/books/' + bookId,
+            book
+          )
+        : await axios.post(
+            'https://memo-react-mysql-backend.onrender.com/books',
+            book
+          );
       navigate('/');
     } catch (err) {
       console.log(err);
